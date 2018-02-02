@@ -65,7 +65,7 @@ class Dashboard extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className='container'>
 
         {this.state.loading && 
           <div style={styles.loading}>
@@ -102,11 +102,17 @@ class Dashboard extends React.Component {
           <div>Predix BlobStore Service Demo - JavaScript</div>
         </section>
 
-        <UploadFile />
+        <section className='flex'>
+          <div style={{flex:1, background: '#f7f7f7', borderRight: '1px solid #e0e0e0'}}>
+            <UploadFile/>
+          </div>
 
-        {this.state.contents !== undefined && 
-          <Contents contents={this.state.contents} deleteFile={this.deleteFile}/>
-        }
+          {this.state.contents !== undefined && 
+            <div style={{flex:4, background: '#f7f7f7'}}>
+              <Contents contents={this.state.contents} deleteFile={this.deleteFile}/>
+            </div>
+          }
+        </section>
 
       </div>
     )
@@ -131,6 +137,7 @@ const styles = {
     background: '#fafafa',
     fontSize: '2em',
     fontWeight: 'bold',
+    color: '#424242'
   }
 }
 

@@ -43,7 +43,7 @@ class Contents extends React.Component {
           </px-alert-message>
         }
 
-        <h2 style={{marginTop: 0}}>Uploaded Files</h2>
+        <h2 style={{marginTop: 0, color: '#424242'}}>Uploaded Files</h2>
         <Table
           selectable={false}>
           <TableHeader
@@ -82,7 +82,7 @@ class Contents extends React.Component {
 const styles = {
   list: {
     padding: '2em',
-    background: '#f4f4f4',
+    background: '#f7f7f7',
   },
   loading: {
     background: 'white',

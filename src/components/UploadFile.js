@@ -61,15 +61,16 @@ class UploadFile extends React.Component {
           </px-alert-message>
         }
 
-        <h2 style={{marginTop: 0}}>Upload a File</h2>
+        <h2 style={{marginTop: 0, color: '#424242'}}>Upload a File</h2>
         <input 
           type='file'
           onChange={e => this.setState({input: e.target.files})}></input>
-        <p>Note: Uploading a file of the same name will replace the existing file.</p>
         <RaisedButton 
+          style={{marginTop: '1em'}}
           label="Upload" 
           primary={true}
           onClick = {e => this.uploadFile(this.state.input)} />
+        <p style={{color: '#424242'}}><strong>Note:</strong> Uploading a file of the same name will replace the existing file.</p>
       </section>
     )
   }
