@@ -135,10 +135,10 @@ const styles = {
   },
   heading: {
     padding: '1em',
-    background: '#f0f0f0',
+    background: '#111f27',
     fontSize: '2em',
     fontWeight: 'bold',
-    color: '#424242'
+    color: '#b6c3cc'
   }
 }
 
