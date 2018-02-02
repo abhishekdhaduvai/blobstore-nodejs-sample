@@ -14,27 +14,29 @@ class UploadFile extends React.Component {
 
   uploadFile = (data) => {
 
-    this.setState({
-      loading: true,
-      loadingText: `Uploading ${data[0].name}`
-    })
-    
-    const formData = new FormData();
-    formData.append('file', data[0], data[0].name)
-
-    axios.post('/blob', formData)
-    .then(res => {
-      location.reload();
-      this.setState({loading: false});
-    })
-    .catch(err => {
-      console.log(err)
+    for(let i=0; i<data.length; i++) {
+      
       this.setState({
-        loading: false,
-        error: true,
-        errorMessage: err.response.data
-      });
-    })
+        loading: true,
+        loadingText: `Uploading ${data[i].name}`
+      })
+
+      const formData = new FormData();
+      formData.append('file', data[i], data[i].name)
+
+      axios.post('/blob', formData)
+      .then(res => {
+        location.reload();
+      })
+      .catch(err => {
+        console.log(err)
+        this.setState({
+          loading: false,
+          error: true,
+          errorMessage: err.response.data
+        });
+      })
+    }
   }
 
   render() {
@@ -63,6 +65,7 @@ class UploadFile extends React.Component {
 
         <h2 style={{marginTop: 0, color: '#424242'}}>Upload a File</h2>
         <input 
+          multiple
           type='file'
           onChange={e => this.setState({input: e.target.files})}></input>
         <RaisedButton 
