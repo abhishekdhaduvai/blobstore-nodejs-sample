@@ -79,7 +79,7 @@ class UploadFile extends React.Component {
 const styles = {
   input: {
     padding: '2em',
-    background: '#f7f7f7'
+    background: 'inherit'
   },
   loading: {
     background: 'white',

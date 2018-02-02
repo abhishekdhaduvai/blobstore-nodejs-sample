@@ -78,6 +78,7 @@ class Dashboard extends React.Component {
 
         {this.state.done &&
           <px-alert-message
+            hide-severity
             visible
             type='information'
             action='dismiss'
@@ -99,7 +100,7 @@ class Dashboard extends React.Component {
         }
 
         <section style={styles.heading}>
-          <div>Predix BlobStore Service Demo - JavaScript</div>
+          <div>Predix BlobStore Service Demo</div>
         </section>
 
         <section className='flex'>
@@ -134,7 +135,7 @@ const styles = {
   },
   heading: {
     padding: '1em',
-    background: '#fafafa',
+    background: '#f0f0f0',
     fontSize: '2em',
     fontWeight: 'bold',
     color: '#424242'

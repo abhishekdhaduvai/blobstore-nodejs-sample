@@ -82,7 +82,7 @@ class Contents extends React.Component {
 const styles = {
   list: {
     padding: '2em',
-    background: '#f7f7f7',
+    background: 'inherit',
   },
   loading: {
     background: 'white',
