@@ -1,0 +1,8 @@
+{
+  "development": {
+    "appURL": "http://localhost:5000",
+    "accessKeyId": "{AWS Access Key}",
+    "secretAccessKey": "{AWS Secret}",
+    "bucketName": "{S3 Bucket}"
+  }
+}

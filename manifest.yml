@@ -1,0 +1,18 @@
+---
+applications:
+  - name: blobstore-nodejs
+    memory: 1G
+    buildpack: nodejs_buildpack
+    command: node server/app.js
+    path: dist
+services:
+ # - your-uaa
+ # - your-timeseries-instance
+ # - your-asset
+   - BCS_BLOBSTORE
+env:
+    node_env: production
+    uaa_service_label : predix-uaa
+    # Add these values for authentication in the cloud
+    # base64ClientCredential: base64
+    # loginBase64ClientCredential: base64

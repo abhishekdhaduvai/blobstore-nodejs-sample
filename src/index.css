@@ -1,0 +1,52 @@
+* {
+  font-family: 'PT Sans';
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #f4f4f4;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+th {
+  font-size: 18px !important;
+}
+
+td {
+  font-size: 15px !important;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+table {
+  background: inherit !important;
+}
+
+.spinner {
+  text-align: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top:0;
+  bottom:0;
+  z-index: 2;
+  background: white;
+  opacity: 0.8;
+  display: flex;
+}
+
+px-alert-message {
+  z-index: 2;
+  float: right;
+  position: fixed;
+  right: 1em;
+  top: 3em;
+}
