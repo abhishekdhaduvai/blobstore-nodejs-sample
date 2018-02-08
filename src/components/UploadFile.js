@@ -63,7 +63,7 @@ class UploadFile extends React.Component {
           </px-alert-message>
         }
 
-        <h2 style={{marginTop: 0, color: '#424242'}}>Upload a File</h2>
+        <h2 style={{marginTop: 0, color: '#424242'}}>Upload Files</h2>
         <input 
           multiple
           type='file'
